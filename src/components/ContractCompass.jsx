@@ -73,7 +73,7 @@ export default function ContractCompass(props) {
   return (
     <div className="compass-container">
       <div className="compassHeader">
-        <img src="/src/assets/logo.png" className="logo" />
+        <img src="https://res.cloudinary.com/dheko2ynz/image/upload/v1697996833/logo_v7wqti.png" className="logo" />
         <button className="close-btn" onClick={disableApp}>
           X
         </button>
