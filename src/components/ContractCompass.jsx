@@ -16,7 +16,6 @@ export default function ContractCompass(props) {
     setStartSummary(true);
     generateRequest();
   }
-
   async function generateRequest() {
     console.log("function running");
     if (!openai.apiKey) {
@@ -27,7 +26,7 @@ export default function ContractCompass(props) {
     }
 
     try {
-      setIsLoading(true); // Set loading state to true
+      setIsLoading(true);
 
       const response = await openai.chat.completions.create({
         model: "gpt-3.5-turbo",
@@ -35,29 +34,29 @@ export default function ContractCompass(props) {
           {
             role: "system",
             content:
-              "You are a helpful assistant that highlights key information customers should know in terms and conditions, for example, cancellation policies, hidden fees, basically anything that may cuse the customer financial harm. Return the summary in an array of concise points, do not exceed 5 points.",
+              "You need to highlight key information in terms and conditions, especially about cancellation policies, hidden fees, or anything financially impactful. Also include a 'unusal polices section' at the end for any unsual terms that aren't normally in terms and conditions for example a large increase in policy or nedding to give up an organ in order to cancel. Make the summary is concise.",
           },
           {
             role: "user",
             content: prompt,
           },
         ],
-        temperature: 0.7, // Adjust temperature as needed
-        max_tokens: 300, // Adjust max_tokens as needed
+        temperature: 0.7,
+        max_tokens: 350,
       });
 
       const summary = response.choices[0].message.content;
 
+      // Process and format the summary
       const formatSummary = summary
         .split("\n")
         .filter((point) => point.trim() !== "");
 
       setAnalysis(formatSummary);
-
-      setIsLoading(false); // Set loading state back to false after the request is completed
+      setIsLoading(false);
     } catch (error) {
       console.error(`Error with OpenAI API request: ${error.message}`);
-      setIsLoading(false); // Make sure to handle loading state if there's an error
+      setIsLoading(false);
       throw error;
     }
   }
@@ -73,7 +72,10 @@ export default function ContractCompass(props) {
   return (
     <div className="compass-container">
       <div className="compassHeader">
-        <img src="https://res.cloudinary.com/dheko2ynz/image/upload/v1697996833/logo_v7wqti.png" className="logo" />
+        <img
+          src="https://res.cloudinary.com/dheko2ynz/image/upload/v1697996833/logo_v7wqti.png"
+          className="logo"
+        />
         <button className="close-btn" onClick={disableApp}>
           X
         </button>
@@ -101,9 +103,18 @@ export default function ContractCompass(props) {
             {/* Conditionally render scoreWrapper when isLoading is false */}
             {!isLoading && (
               <div className="scoreWrapper">
-                <div className="score score1">1</div>
-                <div className="score score2">2</div>
-                <div className="score score3">3</div>
+                <div className="scoreContainer">
+                  <div className="score score1">Honesty</div>
+                  <div className="percent">60%</div>
+                </div>
+                <div className="scoreContainer">
+                  <div className="score score2">Fairness:</div>
+                  <div className="percent">40%</div>
+                </div>
+                <div className="scoreContainer">
+                  <div className="score score3">ESG</div>
+                  <div className="percent">N/A</div>
+                </div>
               </div>
             )}
           </>

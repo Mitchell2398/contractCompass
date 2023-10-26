@@ -182,6 +182,7 @@ html {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  margin: 20px 0px;
 }
 
 .score {
@@ -194,8 +195,38 @@ html {
   border: 1px solid lightgray;
   background-color: transparent;
   color: black;
-  padding: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
 }
+
+.scoreContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.score1 {
+  border: 2px solid darkorange;
+
+}
+
+.score2 {
+  border: 2px solid red;
+  
+}
+
+.score3 {
+  border: 2px solid green;
+  
+}
+
+.highlight {
+  background-color: #FFFF00; /* yellow background */
+  padding: 2px 4px; /* small padding around the text */
+  border-radius: 4px; /* rounded corners */
+}
+
 
 .loading-spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
@@ -205,6 +236,8 @@ html {
   height: 30px;
   animation: spin 1s linear infinite;
 }
+
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }

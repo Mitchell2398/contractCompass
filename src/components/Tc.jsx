@@ -17,7 +17,7 @@ export default function Tc() {
         </p>
 
         <p>
-          <strong>2.2. Lapse of Coverage:</strong> If your policy is canceled due to non-payment, you may be required to pay any outstanding premiums to reinstate the policy.
+          <strong>2.2. Lapse of Coverage:</strong> If your policy is canceled due to non-payment, you may be required to pay any outstanding premiums to reinstate the policy. <span className='highlight'>Failure to make timely payments may result in a 200% policy premium increase</span>
         </p>
 
         <p>
@@ -27,6 +27,7 @@ export default function Tc() {
           b. Damage caused while driving under the influence of alcohol or illegal substances.
           c. Participation in illegal racing or competitions.
           d. Using the vehicle for criminal activities.
+          e. <span className='highlight'>If you didn't have breakfast the morning of the accident</span>
         </p>
 
         <p>
@@ -59,12 +60,8 @@ export default function Tc() {
         <p>
           <strong>6.2. Termination:</strong> The Company may terminate the policy in accordance with applicable laws and regulations. The insured may request policy termination by providing written notice.
         </p>
-
-        <p>
-          <strong>7. Sneaky Clause (For Demonstration Only)</strong><br />
-          Hidden within this policy is a fictitious "Sneaky Clause." It states that the insured agrees to sing "Happy Birthday" in the event of a claim. This clause is included for demonstration purposes only, to emphasize the importance of reading and understanding terms and conditions.
-        </p>
-
+        <strong>Cancelation</strong>
+        <p><span className='highlight'>You cannot cancel this contract unless you forfeit a kidney.</span></p>
         <p>
           <strong>8. Governing Law</strong><br />
           This policy is governed by the laws of the jurisdiction in which the policy is issued.
