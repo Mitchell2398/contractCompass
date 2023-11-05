@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
 body,
 html {
   padding: 0 0;
@@ -5,27 +7,41 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 {
+  color: #03035d;
+  margin: 0;
+}
+
+.strong {
+  color: #424299;
+}
+
 /* App css */
 .wrapper {
   display: flex;
-  align-items: start;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: 100%;
-  margin-top: 25px;
 }
 
 /* Components */
 /* Browser Header css */
+.sticky {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
 .browser-header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: white;
   border-bottom: lightgray 1px solid;
-  padding: 15px;
+  padding: 5px;
+
   color: white;
-  
 }
 
 .left-section {
@@ -64,17 +80,47 @@ html {
   cursor: pointer;
 }
 
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 75px;
+  padding: 5px 20px;
+}
+
+.logoGalway {
+  color: #03035d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  letter-spacing: 7px;
+}
+
+.navItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navItem {
+  text-decoration: none;
+  padding: 0 12px; /* Optional: Add a little horizontal padding for better spacing */
+}
+
 /* Tc component  */
 
 .tc-container {
-  margin: 0 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  margin: 125px 0px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  width: 50%;
   border-radius: 5px;
-  background-color: #f5f5f5;
-  overflow-y: scroll; /* Enable vertical scrolling */
   min-height: 450px; /* Adjust the height as needed */
-  width: 40%;
 }
 
 .tc-content {
@@ -83,19 +129,22 @@ html {
   line-height: 1.6;
 }
 
+
 /* contract compass */
 /* Add your CSS styles for the contractCompass component here */
 
 .compass-container {
   display: flex;
   flex-direction: column;
-  min-height: 350px;
-  margin-left: 10px;
+  position: fixed;
+  align-self: flex-end;
+  min-height: 450px;
+  margin: 50px;
   padding: 10px;
-  width: 35%;
-  background: rgba(255, 255, 255, 0.19);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 11;
+  width: 20%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .compassHeader {
@@ -103,48 +152,56 @@ html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  border-bottom: 1px solid gray;
 }
 
-.logo{
+.logo {
   height: auto;
   width: 100px;
-
 }
-
 
 .close-btn {
   background-color: #ff6666;
-  color: white; 
-  border: none; 
-  border-radius: 50%; 
-  display:block;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: block;
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  font-size: 12px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .close-btn:hover {
   background-color: #ff0000; /* Darker red color on hover */
 }
 
+.introContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.introText {
+  font-family:"Raleway", sans-serif;
+  width: 100%;
+  margin: 0 0;
+  margin-bottom: 50px;
+}
 
 .compass-content {
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 300px;
 }
-
 
 .summary-textbox {
   width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  max-height: 200px; /* Adjust the maximum height as needed */
+  font-family: "Raleway", sans-serif;
+  max-height: 400px; /* Adjust the maximum height as needed */
   min-height: 200px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -157,18 +214,16 @@ html {
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-
-
 .startSummaryBtn {
   background-color: #1a936f;
-  color: white; 
-  border: none; 
-  display:block;
+  color: white;
+  border: none;
+  display: block;
   padding: 10px 22.5px;
   border-radius: 10px;
-  font-size: 16px; 
-  cursor: pointer; 
-  transition: background-color 0.3s; 
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   align-self: center;
 }
 
@@ -176,98 +231,108 @@ html {
   background-color: #1a936f; /* Darker red color on hover */
 }
 
-
-
 .scoreWrapper {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  margin: 20px 0px;
+  margin: 20px 5px;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .score {
   display: flex;
   justify-content: center;
+  font-family: "Raleway", sans-serif;
   align-items: center;
-  height: 50px;
-  width: 50px;
+  height: 50px; /* Increased size for better visibility */
+  width: 50px;  /* Increased size for better visibility */
   border-radius: 50%;
-  border: 1px solid lightgray;
-  background-color: transparent;
-  color: black;
-  padding: 10px;
-  margin-bottom: 5px;
+  background-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em; /* Larger font size for better readability */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2); /* subtle shadow for depth */
+  margin-bottom: 10px;
+  background-image: radial-gradient(circle, #fff 0%, #f0f0f0 100%);
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.scoreContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
+/* Hover effect */
+.score:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.25);
+}
+
+.percent {
+  color: black;
+  font-size: 0.9em; /* Smaller font size for the label */
+  font-family: "Raleway", sans-serif;
 }
 
 .score1 {
-  border: 2px solid darkorange;
-
+  background-image: radial-gradient(circle, #ffcc00 0%, #ff9900 100%);
 }
 
 .score2 {
-  border: 2px solid red;
-  
+  background-image: radial-gradient(circle, #ff7043 0%, #ff5722 100%);
 }
 
 .score3 {
-  border: 2px solid green;
-  
+  background-image: radial-gradient(circle, #48c94d 0%, #388e3c 100%);
 }
 
+
 .highlight {
-  background-color: #FFFF00; /* yellow background */
+  background-color: #ffff00; /* yellow background */
   padding: 2px 4px; /* small padding around the text */
   border-radius: 4px; /* rounded corners */
 }
 
-
 .loading-spinner {
   border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #007BFF; /* Choose your preferred color */
+  border-top: 4px solid #007bff; 
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   animation: spin 1s linear infinite;
+  z-index: 10;
 }
-
-
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 @media (max-width: 900px) {
   /* Media query for screens with a maximum width of 768px (typical for mobile devices) */
 
- .wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  
- }
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
- .browser-header{
-  margin-bottom: 40px;
-  width: 100%;
- }
+  .browser-header {
+    margin-bottom: 40px;
+    width: 100%;
+  }
 
- .compass-container{
-  width: 100%;
-  margin-bottom: 50px;
- }
+  .compass-container {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
- .tc-container{
-  width: 100%;
- 
- }
-
+  .tc-container {
+    width: 100%;
+  }
 }
+

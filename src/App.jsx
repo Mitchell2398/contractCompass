@@ -3,17 +3,17 @@ import BrowserHeader from "./components/BrowserHeader";
 import Tc from "./components/Tc";
 import ContractCompass from "./components/contractCompass";
 
+
 function App() {
   const [displayApp, setDisplayApp] = useState(false);
 
   return (
-    <>
+    <div className="wrapper">
       <BrowserHeader setDisplayApp={setDisplayApp} />
-      <div className="wrapper">
-        <Tc />
-        {displayApp && <ContractCompass setDisplayApp={setDisplayApp}  />}
-      </div>
-    </>
+
+      <Tc />
+      {displayApp && <ContractCompass setDisplayApp={setDisplayApp} />}
+    </div>
   );
 }
 
