@@ -25,7 +25,7 @@ export default function Tc() {
           <li>Accidents or damages stemming from intoxication or drug influence.</li>
           <li>Engagement in unlawful racing, stunts, or competitions.</li>
           <li>Utilization of the vehicle for criminal endeavors.</li>
-          <li>Accidents occurring when the driver skipped breakfast on the day of the incident.</li>
+          <li>Any accident that happens after 5pm</li>
         </ul>
         
         <p><strong className="strong">Wear and Tear:</strong> Standard wear and tear, routine maintenance, or damages originating from negligence in regular vehicle upkeep are outside the coverage scope. Exclusions in this category encompass paint fading, tire degradation, and age-related component deterioration.</p>
