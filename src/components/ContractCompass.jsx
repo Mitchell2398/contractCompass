@@ -58,15 +58,15 @@ export default function ContractCompass(props) {
             <div className="summary-textbox">
               <h3>Here's what we found</h3>
               <ul>
-                <li><strong>Vehicle Coverage Details:</strong> It's crucial to know exactly what your vehicle insurance covers as indicated in your policy schedule, covering damage, theft, and liability.</li>
-                <li><strong>Premium Payment Obligations: </strong> Regular premium payments are required, and missing payments can lead to a severe penalty, <span className="highlight">increasing your policy premium by 200%</span></li>
-                <li><strong>Exclusion Clauses:</strong> The policy includes some standard and one particularly odd exclusion; <span className="highlight">Any accident that happens after 5pm.</span> This unusual clause could have significant implications for claim validity.</li>
-                <li><strong>Cancellation Terms:</strong> The contract's cancellation clause, which <span className="highlight">demands a kidney</span> is not just atypical but suggests a potentially serious issue with the contract's legality or intent.</li>
-                <li><strong>Claims Process and Disputes:</strong>The process for notifying and processing claims is outlined, including the right of the company to investigate. In disputes over claim value, an independent appraisal may be necessary, which could lengthen the claims process.</li>
+                <li className="mainPoints"><strong>Vehicle Coverage Details:</strong> It's crucial to know exactly what your vehicle insurance covers as indicated in your policy schedule, covering damage, theft, and liability.</li>
+                <li className="mainPoints"><strong>Premium Payment Obligations: </strong> Regular premium payments are required, and missing payments can lead to a severe penalty, <span className="highlight">increasing your policy premium by 200%</span></li>
+                <li className="mainPoints"><strong>Exclusion Clauses:</strong> The policy includes some standard and one particularly odd exclusion; <span className="highlight">Any accident that happens after 5pm.</span> This unusual clause could have significant implications for claim validity.</li>
+                <li className="mainPoints"><strong>Cancellation Terms:</strong> The contract's cancellation clause, which <span className="highlight">demands a kidney</span> is not just atypical but suggests a potentially serious issue with the contract's legality or intent.</li>
+                <li className="mainPoints"><strong>Claims Process and Disputes:</strong>The process for notifying and processing claims is outlined, including the right of the company to investigate. In disputes over claim value, an independent appraisal may be necessary, which could lengthen the claims process.</li>
               </ul>
             </div>
             <div className="scoreWrapper">
-
+ 
               <div className="scoreContainer">
                 <div className="score score3">70</div>
                 <div className="percent">Clarity</div>
